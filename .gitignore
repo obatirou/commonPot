@@ -1,0 +1,8 @@
+cache/
+out/
+lcov.info
+node_modules/
+.env
+.DS_Store
+.idea
+*.log

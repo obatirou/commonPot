@@ -1,0 +1,5 @@
+[profile.default]
+fuzz-runs = 40
+src = 'src'
+out = 'out'
+libs = ['lib']
