@@ -1,10 +1,41 @@
-# <h1 align="center"> Forge Template </h1>
+# EXPERIMENTAL
 
-**Template repository for getting started quickly with Foundry projects**
+Be careful with it.
+Tests are not extented, not peer reviewed and only a side project to code more.
 
-![Github Actions](https://github.com/foundry-rs/forge-template/workflows/CI/badge.svg)
+## Common Pot
+
+A kind of opinionated multi-assets lockable tokenized vault
+
+### Why ?
+
+For fun
+
+The idea came awith ERC4626 and thought it would be nice to have a multi asset tokenized vault for someone to pass on to whom it wants. Added a lock for holders.  
+We could add strategies and more.  
+It is opinionated as the configuration is dependant of a owner and token owners and far from the ERC4626.  
+Token owners can only withdraw when assets are not locked. In the actual version, shares are only given by the owner of the vault.
+
+### For who ?
+
+Might be used by a power user and create a vault for its children/friends. Or by an anon team with a multi sig as owner for deployment. Or maybe nobody. I only want to ship more on the open, if it can be useful it is better though.
+
+## Contribution
+
+### You found a bug or optimization ?
+
+Great !  
+Drop a comment / issue / PR or any thing you want to share this finding.
+
+### You like or do not like the implementation ?
+
+I would be more than happy to discuss it with you.  
+I mainly use twitter or github but my mail is also open.
 
 ## Custom template
+
+It is based on [this template](https://github.com/obatirou/forge-template)  
+With a lot of inspiration from https://github.com/smartcontractkit/foundry-starter-kit
 
 -   Yarn as package manager
 -   Husky for git hooks
@@ -12,39 +43,3 @@
 -   Makefile
 -   .env for secrets
 -   custom .gitignore
-
-## Getting Started
-
-Click "Use this template" on [GitHub](https://github.com/foundry-rs/forge-template) to create a new repository with this repo as the initial state.
-
-Or, if your repo already exists, run:
-
-```sh
-forge init
-forge build
-forge test
-```
-
-## Writing your first test
-
-All you need is to `import forge-std/Test.sol` and then inherit it from your test contract. Forge-std's Test contract comes with a pre-instatiated [cheatcodes environment](https://book.getfoundry.sh/cheatcodes/), the `vm`. It also has support for [ds-test](https://book.getfoundry.sh/reference/ds-test.html)-style logs and assertions. Finally, it supports Hardhat's [console.log](https://github.com/brockelmore/forge-std/blob/master/src/console.sol). The logging functionalities require `-vvvv`.
-
-```solidity
-pragma solidity 0.8.10;
-
-import "forge-std/Test.sol";
-
-contract ContractTest is Test {
-    function testExample() public {
-        vm.roll(100);
-        console.log(1);
-        emit log("hi");
-        assertTrue(true);
-    }
-}
-
-```
-
-## Development
-
-This project uses [Foundry](https://getfoundry.sh). See the [book](https://book.getfoundry.sh/getting-started/installation.html) for instructions on how to install and use Foundry.
